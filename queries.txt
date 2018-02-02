@@ -1,0 +1,12 @@
+queries.txt
+
+1 - 
+User.query.filter_by(email='cats@gmail.com').one()
+User.query.filter(User.email=='cats@gmail.com').one()
+db.session.query(User).filter_by(email='cats@gmail.com').one()
+db.session.query(User).filter(User.email=='cats@gmail.com').one()
+2 - Movie.query.filter_by(title='Cape Fear').all()
+3 - db.session.query(User).filter(User.zipcode=='90703').all()
+4 - Rating.query.filter_by(score=5).all()
+5 - Rating.query.filter_by(movie_id=7, user_id=6).one()
+6 - Rating.query.filter(Rating.score > 3).all()
